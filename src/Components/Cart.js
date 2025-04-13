@@ -17,7 +17,11 @@ function Cart() {
 <div className='flex justify-between items-center my-3 '>
 
   <span className='text-x1 font-bold text-gray-800'>My Order</span>
-  <IoMdClose  onClick={()=>setActiveCart(!activeCart)} className='border-2 border-gray-600 text-gray-600 font-bold p-1 text-x1 rounded-md hover:text-red-300 hover:border-red-300 cursor-pointer '/>
+  <IoMdClose 
+  onClick={() => setActiveCart(!activeCart)} 
+  className='text-3xl border-2 border-gray-500 text-gray-700 font-bold p-2 rounded-full hover:text-red-500 hover:border-red-500 transition duration-300 cursor-pointer'
+/>
+
 </div>
 {
   cartItems.length> 0 ? cartItems.map((food)=>{
@@ -26,7 +30,7 @@ function Cart() {
     )
   }):<h2 className='text-center text-xl font-bold text-gray-red'></h2>
 }
-<ItemCard/>
+{/* <ItemCard/> */}
     <div className='absolute bottom-0'>
       <h3 className='font-semibold text-gray-800'>items:{totalQty}</h3>
       <h3 className='font-semibold text-gray-800'>Total Amount:{totalPrice}</h3>

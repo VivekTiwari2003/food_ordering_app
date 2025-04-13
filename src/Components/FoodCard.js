@@ -18,13 +18,18 @@ const FoodCard=({id,name,price,desc,img,rating,handleToast}) =>{
             <span className=' flex justify-center items-center'>
                 <AiFillStar className='mr-1 text-yellow-400'/> {rating}
             </span>
-            <button  onClick={()=>{
-              dispatch(addToCart({
-                id,name,price,rating,img,qty:1
-              }));
-              handleToast(name);
-             }} 
-             className='p-i text-white bg-green-500 hover:bg-green-600 reounded-lg text-sm'>Add to cart</button>
+            <button
+        onClick={() => {
+          dispatch(addToCart({
+            id, name, price, rating, img, qty: 1
+          }));
+          handleToast(name);
+        }}
+        className="px-5 py-2 mt-4 text-white bg-green-500 hover:bg-green-600 rounded-xl text-sm shadow-md hover:shadow-lg transition duration-300 ease-in-out transform hover:-translate-y-1"
+      >
+        🛒 Add to Cart
+</button>
+
         </div>
     </div>
   )
