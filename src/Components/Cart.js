@@ -28,7 +28,7 @@ function Cart() {
     return ( 
     <ItemCard key={food.id} id={food.id} name={food.name} price={food.price} img={food.img}/>
     )
-  }):<h2 className='text-center text-xl font-bold text-gray-red'></h2>
+  }):<h2 className='text-center text-xl font-bold text-gray-red'>No items in your cart</h2>
 }
 {/* <ItemCard/> */}
     <div className='absolute bottom-0'>

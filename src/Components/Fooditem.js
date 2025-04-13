@@ -2,7 +2,7 @@ import React from 'react'
 import FoodCard from './FoodCard'
 import FoodData from "../data/foodData"
 import toast,{Toaster} from "react-hot-toast";
-import { UseSelector, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
 function Fooditem() {
   const category = useSelector((state)=>state.category.category)
